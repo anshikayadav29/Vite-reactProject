@@ -28,7 +28,7 @@ export default App*/
 
 
 
-
+/*
 
 function App() {
   const name = "Anshika yadav"; 
@@ -39,6 +39,29 @@ function App() {
       <h1>JSX with Curly Braces</h1>
       <h1>{name}</h1> 
       <h1>{x+y}</h1> 
+
+    </div>
+  );
+}
+
+export default App;*/
+
+
+
+
+function App() {
+  const name = "Anshika yadav"; 
+  let x=20;
+  let y=40;
+  function fruit(){
+    return "Apple"
+  }
+  return (
+    <div>
+      <h1>JSX with Curly Braces</h1>
+      <h1>{name}</h1> 
+      <h1>{x+y}</h1> 
+      {fruit()} //without h1 tag its running but h1 tag is must imp
 
     </div>
   );
