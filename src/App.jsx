@@ -48,7 +48,7 @@ export default App;*/
 
 
 
-
+/*
 function App() {
   const name = "Anshika yadav"; 
   let x=20;
@@ -62,6 +62,45 @@ function App() {
       <h1>{name}</h1> 
       <h1>{x+y}</h1> 
       {fruit()} //without h1 tag its running but h1 tag is must imp
+
+    </div>
+  );
+}
+
+export default App;*/
+
+
+
+function App() {
+  const name = "Anshika yadav"; 
+  let x=20;
+  let y=40;
+  function fruit(){
+    return "Apple"
+  }
+  function sum (a,b){
+    return a+b
+  }
+function operation(a,b,op){
+  if(op=="+"){
+    return a+b;
+  }else if(op=="_"){
+    return a-b;
+  }else{
+    return a+b
+  }
+}
+
+
+
+  return (
+    <div>
+      <h1>JSX with Curly Braces</h1>
+      <h1>{name}</h1> 
+      <h1>{x+y}</h1> 
+      <h1>{fruit()}</h1>
+      <h1>{sum(100,10)}</h1>
+      <h1>{operation(20,20,"+")}</h1>
 
     </div>
   );
