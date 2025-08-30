@@ -105,8 +105,8 @@ function operation(a,b,op){
 
 export default App;*/
 
-function App() {
-  /*const name = "Anshika yadav"; */
+/*function App() {
+  /*const name = "Anshika yadav"; 
   let x=20;
   let y=40;
   function fruit(){
@@ -140,4 +140,21 @@ function operation(a,b,op){
   );
 }
 
-export default App;
+export default App;*/
+
+function App(){
+  function callFun(){
+    alert("function called")
+  }
+  const fruit =()=>{
+    alert("apple")
+  }
+
+  return (
+    <div>
+      <h1>Event and function call</h1>
+      <button onClick={fruit}>Click Me</button>
+      </div>
+  )
+}
+export default App
