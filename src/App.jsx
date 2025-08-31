@@ -158,7 +158,7 @@ export default App;*/
   )
 }
 export default App */
-import { useState } from "react";
+/*import { useState } from "react";
 
 function App() {
   const [fruit, setFruit] = useState("Apple");
@@ -172,6 +172,28 @@ function App() {
       <h1>State in React Js</h1>
       <h1>{fruit}</h1>
       <button onClick={handleFruit}>Change Fruit Name</button>
+    </div>
+  );
+}
+
+export default App;*/
+
+import { useState } from "react";
+import Counter from "./Counter";
+
+function App() {
+  const [fruit, setFruit] = useState("Apple");
+
+  const handleFruit = () => {
+    setFruit("Banana");
+  };
+
+  return (
+    <div>
+      <h1>State in React JS</h1>
+      <h2>{fruit}</h2>
+      <button onClick={handleFruit}>Change Fruit Name</button>
+      <Counter />
     </div>
   );
 }
