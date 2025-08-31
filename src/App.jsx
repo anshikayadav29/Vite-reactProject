@@ -142,7 +142,7 @@ function operation(a,b,op){
 
 export default App;*/
 
-function App(){
+/*function App(){
   function callFun(){
     alert("function called")
   }
@@ -157,4 +157,23 @@ function App(){
       </div>
   )
 }
-export default App
+export default App */
+import { useState } from "react";
+
+function App() {
+  const [fruit, setFruit] = useState("Apple");
+
+  const handleFruit = () => {
+    setFruit("Banana");
+  };
+
+  return (
+    <div>
+      <h1>State in React Js</h1>
+      <h1>{fruit}</h1>
+      <button onClick={handleFruit}>Change Fruit Name</button>
+    </div>
+  );
+}
+
+export default App;
