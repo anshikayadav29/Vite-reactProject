@@ -246,7 +246,7 @@ function App(){
   )
 }
 export default App*/
-import { useState } from "react"
+/*import { useState } from "react"
 function App(){
   const [count,setCount]=useState(3);
   return(
@@ -264,4 +264,15 @@ function App(){
     </div>
   )
 }
+export default Appimport User from "./User"*/
+
+function App() {
+  return (
+    <div>
+      <h1>Props in React js</h1>
+      <User name="Anshika Yadav" age={29} email="anshika@test.com" />
+    </div>
+  )
+}
+
 export default App
