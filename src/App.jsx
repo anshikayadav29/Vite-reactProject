@@ -200,7 +200,7 @@ function App() {
 
 export default App;*/
 
-import { useState } from "react"
+/*import { useState } from "react"
 function App(){
   const [display,setDisplay]=useState(true)
   return (
@@ -212,4 +212,21 @@ function App(){
     </>
   )
 }
+export default App*/
+import { useState } from "react"
+
+function App() {
+  const [display, setDisplay] = useState(true)
+
+  return (
+    <>
+      <h1>Toggle in React js </h1>
+      {
+        display ? <h1>Anshika Yadav</h1> : null
+      }
+      <button onClick={() => setDisplay(!display)}>Toggle</button>
+    </>
+  )
+}
+
 export default App
