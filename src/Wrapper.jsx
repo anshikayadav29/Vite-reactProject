@@ -16,4 +16,5 @@ function Wrapper({ color = "green", children }) {
 }
 
 export default Wrapper
+//props end
 
