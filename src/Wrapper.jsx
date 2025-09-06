@@ -73,6 +73,7 @@ function App(){
         value={email}
       />
       <button>Submit</button>
+     <button onClick={()=>{setEmail(')')}}>clear</button>
       <h3>{name}</h3>
       <h3>{password}</h3>
       <h3>{email}</h3>
