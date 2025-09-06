@@ -266,7 +266,7 @@ function App(){
 }
 export default Appimport User from "./User"*/
 
-function App() {
+/*function App() {
   return (
     <div>
       <h1>Props in React js</h1>
@@ -276,3 +276,102 @@ function App() {
 }
 
 export default App
+*/
+
+
+
+
+/*import User from "./User"
+
+function App() {
+  let userName="Anil Yadav";
+  let age=50;
+  let email="anil@test.com"
+  return (
+    <div>
+      <h1>Props in React js</h1>
+      <User name={userName} age={age} email={email}
+      />
+    </div>
+  )
+}
+
+export default App*/
+
+/*import User from "./User"
+
+function App() {
+  let userObject = {
+    name: "Anil Yadav",
+    age: "29",
+    email: "anil@test.com"
+  }
+
+  let userObject2 = {
+    name: "Peter",
+    age: "20",
+    email: "peter@test.com"
+  }
+
+  return (
+    <div>
+      <h1>Props in React JS</h1>
+      <User user={userObject} />
+      <User user={userObject2} />
+    </div>
+  )
+}
+
+export default App;*/
+/*import User from "./User"
+
+function App() {
+  let userObject = {
+    name: "Anil Yadav",
+    age: "29",
+    email: "anil@test.com"
+  }
+
+  let userObject2 = {
+    name: "Peter",
+    age: "20",
+    email: "peter@test.com"
+  }
+
+  return (
+    <div>
+      <h1>Props in React JS</h1>
+      <User user={userObject} />
+      <User user={userObject2} />
+      <College />
+    </div>
+  )
+}
+
+function College() {
+  return (
+    <div>
+      <h1>College</h1>
+    </div>
+  )
+}
+
+export default App;   */
+import User from "./User"
+import Wrapper from "./Wrapper"
+
+function App() {
+  return (
+    <div>
+      <h1>Props in React js</h1>
+      <Wrapper />
+      {/* 
+      <User name="Anshika Yadav" />
+      <User name="Sam" /> 
+      */}
+    </div>
+  )
+}
+
+export default App;
+
