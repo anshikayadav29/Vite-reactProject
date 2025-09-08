@@ -357,7 +357,7 @@ function College() {
 }
 
 export default App;   */
-import User from "./User"
+/*import User from "./User"
 import Wrapper from "./Wrapper"
 
 function App() {
@@ -368,10 +368,54 @@ function App() {
       {/* 
       <User name="Anshika Yadav" />
       <User name="Sam" /> 
-      */}
+      }
     </div>
   )
 }
 
+export default App;*/
+/*import User from "./User"
+import Wrapper from "./Wrapper"
+
+function App() {
+  return (
+    <div>
+      <h1>Props in React JS</h1>
+
+      {/* Wrapper with custom color and children }
+      <Wrapper color="orange">
+        <h1>Hello Everyone</h1>
+      </Wrapper>
+
+      <Wrapper>
+        <h1>Hello Anil</h1>
+      </Wrapper>
+
+      <Wrapper>
+        <h1>Hello Admin</h1>
+        <h2 style={{ color: "red" }}>Please login</h2>
+      </Wrapper>
+
+    
+      
+      { <User name="Sam" /> }
+    </div>
+  )
+}
+
+export default App*/
+
+import Skills from './Skills';
+
+function App() {
+  return (
+    <div>
+      <h1>Hello React</h1>
+      <Skills />
+    </div>
+  );
+}
+
 export default App;
+
 
