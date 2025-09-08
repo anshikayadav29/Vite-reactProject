@@ -404,6 +404,7 @@ function App() {
 }
 
 export default App*/
+//Handle checkbox in React
 
 import Skills from './Skills';
 
