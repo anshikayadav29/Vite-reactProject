@@ -418,7 +418,7 @@ function App() {
 }
 
 export default App;*/
-import { useState } from "react";
+/*import { useState } from "react";
 import "./App.css";
 
 function App() {
@@ -472,7 +472,94 @@ function App() {
   );
 }
 
+export default App;*/
+
+
+
+function App() {
+  const usernameData = [
+    { names: "Anil", age: "29", email: "anil@test.com", id: 1 },
+    { names: "Prince", age: "29", email: "prince@test.com", id: 2 },
+    { names: "Ram", age: "24", email: "ram@test.com", id: 3 },
+    { names: "Abhay", age: "20", email: "abhay@test.com", id: 4 },
+  ];
+
+  return (
+    <div>
+      <h1>Loop in JSX Map Function</h1>
+      <table border="1">
+        <thead>
+          <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Email</td>
+            <td>Age</td>
+          </tr>
+        </thead>
+
+        <tbody>
+          {usernameData.map((item) => (
+            <tr key={item.id}>
+              <td>{item.id}</td>
+              <td>{item.names}</td>
+              <td>{item.email}</td>
+              <td>{item.age}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
 export default App;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+function App(){
+  const usernames=['anil','sam','peter','bruce'];
+  const usernameData=[
+    {
+      names:'Anil',
+      age:'29',
+      email:"anil@test.com",
+      id:1
+    },
+    {
+      names:'prince',
+      age:'29',
+      email:"prince@test.com",
+      id:2
+    },
+    {
+      names:'ram',
+      age:'24',
+      email:"ram@test.com",
+      id:3
+    },
+    {
+      names:'abhay',
+      age:'20',
+      email:"abhay@test.com",
+      id:4
+    }
+  ]
+  return(
+    <div>
+      <h1>Loop in JSX Map Function</h1>
+    </div>
+  )
+
+}
