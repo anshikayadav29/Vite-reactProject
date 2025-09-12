@@ -476,7 +476,7 @@ export default App;*/
 
 
 
-function App() {
+/*function App() {
   const usernameData = [
     { names: "Anil", age: "29", email: "anil@test.com", id: 1 },
     { names: "Prince", age: "29", email: "prince@test.com", id: 2 },
@@ -512,7 +512,72 @@ function App() {
   );
 }
 
+export default App;*/
+function App() {
+  const usernames = ["anil", "sam", "peter", "bruce"];
+
+  const usernameData = [
+    { names: "Anil", age: "29", email: "anil@test.com", id: 1 },
+    { names: "Prince", age: "29", email: "prince@test.com", id: 2 },
+    { names: "Ram", age: "24", email: "ram@test.com", id: 3 },
+    { names: "Abhay", age: "20", email: "abhay@test.com", id: 4 },
+  ];
+
+  return (
+    <div>
+      <h1>Loop in JSX with Map Function</h1>
+
+      {/* First Table */}
+      <table border="1">
+        <thead>
+          <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Email</td>
+            <td>Age</td>
+          </tr>
+        </thead>
+        <tbody>
+          {usernameData.map((item) => (
+            <tr key={item.id}>
+              <td>{item.id}</td>
+              <td>{item.names}</td>
+              <td>{item.email}</td>
+              <td>{item.age}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+
+      <h2>Dummy Data</h2>
+
+      {/* Second Table */}
+      <table border="1">
+        <thead>
+          <tr>
+            <td>ID</td>
+            <td>Name</td>
+            <td>Email</td>
+            <td>Age</td>
+          </tr>
+        </thead>
+        <tbody>
+          {usernames.map((name, index) => (
+            <tr key={index}>
+              <td>{index + 1}</td>
+              <td>{name}</td>
+              <td>{name}@test.com</td>
+              <td>{20 + index * 5}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
+
 export default App;
+
 
 
 
