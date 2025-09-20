@@ -513,7 +513,7 @@ export default App;*/
 }
 
 export default App;*/
-function App() {
+/*function App() {
   const usernames = ["anil", "sam", "peter", "bruce"];
 
   const usernameData = [
@@ -527,7 +527,7 @@ function App() {
     <div>
       <h1>Loop in JSX with Map Function</h1>
 
-      {/* First Table */}
+      
       <table border="1">
         <thead>
           <tr>
@@ -551,7 +551,7 @@ function App() {
 
       <h2>Dummy Data</h2>
 
-      {/* Second Table */}
+      //second table
       <table border="1">
         <thead>
           <tr>
@@ -572,6 +572,27 @@ function App() {
           ))}
         </tbody>
       </table>
+    </div>
+  );
+}
+
+export default App;*/
+
+/*import User from "./User";
+
+function App() {
+  const users = [
+    { name: "anil", age: 29, email: "anil@test.com" },
+    { name: "sam", age: 34, email: "sam@test.com" },
+    { name: "peter", age: 20, email: "peter@test.com" },
+    { name: "bruce", age: 50, email: "bruce@test.com" }
+  ];
+
+  return (
+    <div>
+      {users.map((item, i) => (
+        <User key={i} data={item} />
+      ))}
     </div>
   );
 }
@@ -627,4 +648,45 @@ function App(){
     </div>
   )
 
+}*/
+
+//use effect
+
+import React, { useState, useEffect } from "react";
+
+function App() {
+  const [counter, setCounter] = useState(0);
+
+  // Run when counter changes
+  useEffect(() => {
+    console.log("Counter value changed:", counter);
+  }, [counter]);
+
+  // Run only once (on component mount)
+  useEffect(() => {
+    console.log("Component mounted");
+    return () => {
+      console.log("Component unmounted");
+    };
+  }, []);
+
+  function counterFunction() {
+    console.log("Counter Function", counter);
+  }
+
+  function callOnce() {
+    console.log("CallOnce function called");
+  }
+
+  return (
+    <div>
+      <h1>React useEffect Example</h1>
+      <p>Counter: {counter}</p>
+      <button onClick={() => setCounter(counter + 1)}>Increase</button>
+      <button onClick={counterFunction}>Run Counter Function</button>
+      <button onClick={callOnce}>Run CallOnce Function</button>
+    </div>
+  );
 }
+
+export default App;
