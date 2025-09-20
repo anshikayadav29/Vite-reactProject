@@ -652,39 +652,62 @@ function App(){
 
 //use effect
 
-import React, { useState, useEffect } from "react";
+// import React, { useState, useEffect } from "react";
+
+// function App() {
+//   const [counter, setCounter] = useState(0);
+
+//   // Run when counter changes
+//   useEffect(() => {
+//     console.log("Counter value changed:", counter);
+//   }, [counter]);
+
+//   // Run only once (on component mount)
+//   useEffect(() => {
+//     console.log("Component mounted");
+//     return () => {
+//       console.log("Component unmounted");
+//     };
+//   }, []);
+
+//   function counterFunction() {
+//     console.log("Counter Function", counter);
+//   }
+
+//   function callOnce() {
+//     console.log("CallOnce function called");
+//   }
+
+//   return (
+//     <div>
+//       <h1>React useEffect Example</h1>
+//       <p>Counter: {counter}</p>
+//       <button onClick={() => setCounter(counter + 1)}>Increase</button>
+//       <button onClick={counterFunction}>Run Counter Function</button>
+//       <button onClick={callOnce}>Run CallOnce Function</button>
+//     </div>
+//   );
+// }
+
+// export default App;
+
+import React, { useState } from "react";
+import Counter from "./Counter";
 
 function App() {
-  const [counter, setCounter] = useState(0);
-
-  // Run when counter changes
-  useEffect(() => {
-    console.log("Counter value changed:", counter);
-  }, [counter]);
-
-  // Run only once (on component mount)
-  useEffect(() => {
-    console.log("Component mounted");
-    return () => {
-      console.log("Component unmounted");
-    };
-  }, []);
-
-  function counterFunction() {
-    console.log("Counter Function", counter);
-  }
-
-  function callOnce() {
-    console.log("CallOnce function called");
-  }
+  const [count, setCount] = useState(0);
+  const [data, setData] = useState(0);
 
   return (
     <div>
-      <h1>React useEffect Example</h1>
-      <p>Counter: {counter}</p>
-      <button onClick={() => setCounter(counter + 1)}>Increase</button>
-      <button onClick={counterFunction}>Run Counter Function</button>
-      <button onClick={callOnce}>Run CallOnce Function</button>
+      <h1>Counter Value {count}</h1>
+      <h2>Data Value {data}</h2>
+
+      <button onClick={() => setCount(count + 1)}>Counter</button>
+      <button onClick={() => setData(data + 1)}>Data</button>
+
+      {/* Counter component ko props bhej rahe hain */}
+      <Counter count={count} data={data} />
     </div>
   );
 }
