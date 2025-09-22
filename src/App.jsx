@@ -691,23 +691,95 @@ function App(){
 
 // export default App;
 
-import React, { useState } from "react";
+// import React, { useState } from "react";
+// import Counter from "./Counter";
+
+// function App() {
+//   const [count, setCount] = useState(0);
+//   const [data, setData] = useState(0);
+
+//   return (
+//     <div>
+//       <h1>Counter Value {count}</h1>
+//       <h2>Data Value {data}</h2>
+
+//       <button onClick={() => setCount(count + 1)}>Counter</button>
+//       <button onClick={() => setData(data + 1)}>Data</button>
+
+//       {/* Counter component ko props bhej rahe hain */}
+//       <Counter count={count} data={data} />
+//     </div>
+//   );
+// }
+
+// export default App;
+/*import React from "react";
 import Counter from "./Counter";
 
 function App() {
-  const [count, setCount] = useState(0);
-  const [data, setData] = useState(0);
+  return (
+    <div className="App">
+      <Counter />
+    </div>
+  );
+}
+
+export default App;*/
+
+function App() {
+  const cardStyle = {
+    border: "1px solid #ccc",
+    width: "200px",
+    boxShadow: "1px 2px 3px 0px #ccc",
+    margin: "10px",
+    textAlign: "center",
+    padding: "10px"
+  };
 
   return (
     <div>
-      <h1>Counter Value {count}</h1>
-      <h2>Data Value {data}</h2>
+      <h1 style={{ color: "red" }}>Inline Style in React Js</h1>
+      <div style={{ display: "flex", flexWrap: "wrap" }}>
+        <div style={cardStyle}>
+          <img
+            style={{ width: "200px" }}
+            src="https://www.w3schools.com/howto/img_avatar.png"
+            alt="avatar"
+          />
+          <h4 style={{ margin: "10px 0 5px 0" }}>Anil Sidhu</h4>
+          <p>Software developer</p>
+        </div>
 
-      <button onClick={() => setCount(count + 1)}>Counter</button>
-      <button onClick={() => setData(data + 1)}>Data</button>
+        <div style={cardStyle}>
+          <img
+            style={{ width: "200px" }}
+            src="https://www.w3schools.com/howto/img_avatar.png"
+            alt="avatar"
+          />
+          <h4 style={{ margin: "10px 0 5px 0" }}>Anil Sidhu</h4>
+          <p>Software developer</p>
+        </div>
 
-      {/* Counter component ko props bhej rahe hain */}
-      <Counter count={count} data={data} />
+        <div style={cardStyle}>
+          <img
+            style={{ width: "200px" }}
+            src="https://www.w3schools.com/howto/img_avatar.png"
+            alt="avatar"
+          />
+          <h4 style={{ margin: "10px 0 5px 0" }}>Anil Sidhu</h4>
+          <p>Software developer</p>
+        </div>
+
+        <div style={cardStyle}>
+          <img
+            style={{ width: "200px" }}
+            src="https://www.w3schools.com/howto/img_avatar.png"
+            alt="avatar"
+          />
+          <h4 style={{ margin: "10px 0 5px 0" }}>Anil Sidhu</h4>
+          <p>Software developer</p>
+        </div>
+      </div>
     </div>
   );
 }
